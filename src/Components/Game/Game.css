@@ -1,0 +1,74 @@
+.userDetails, .diffDetails{
+  float: left;
+}
+
+.userIcon, .gamepadIcon{
+  object-fit: contain;
+}
+
+.userIconCont, .gamepadIconCont{
+  display: inline-block;
+  position: relative;
+}
+
+.userNameCont, .levelCont{
+  display: inline-block;
+  font-family: Breamcatcher;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.gameTitleCont{
+  float: right;
+  font-family: LaserCorpsGradient;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.scoreDetails{
+  float: right;
+  font-family: Breamcatcher;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+/* (1366x768) */
+@media  screen and (max-width: 1366px) {
+  .gameCont{
+    padding-top: 20px;
+  }
+
+  .userIcon, .gamepadIcon {
+    width: 35px;
+    height: 30px;
+  }
+
+  .userIconCont, .gamepadIconCont{
+    bottom: 7px;
+  }
+
+  .userNameCont, .levelCont{
+    font-size: 34px;
+    padding-left: 15px;
+  }
+
+  .gameTitleCont, .scoreDetails{
+    font-size: 34px;
+    padding-right: 50px;
+  }
+}
