@@ -4,22 +4,17 @@ import {
   Container,
   Row,
   Col,
-  Form
 } from 'react-bootstrap';
 import {CountdownTimer} from '../Timer/Timer';
 
 import person from '../../assets/icons/Icon material-person.png';
 import person2x from '../../assets/icons/Icon material-person@2x.png';
-import person3x from '../../assets/icons/Icon material-person@3x.png';
 import gamepad from '../../assets/icons/Icon awesome-gamepad.png';
 import gamepad2x from '../../assets/icons/Icon awesome-gamepad@2x.png';
-import gamepad3x from '../../assets/icons/Icon awesome-gamepad@3x.png';
 import replay from '../../assets/icons/Icon open-reload.png';
 import replay2x from '../../assets/icons/Icon open-reload@2x.png';
-import replay3x from '../../assets/icons/Icon open-reload@3x.png';
 import cross from '../../assets/icons/Icon metro-cross.png';
 import cross2x from '../../assets/icons/Icon metro-cross@2x.png';
-import cross3x from '../../assets/icons/Icon metro-cross@3x.png';
 
 export class Game extends React.Component{
 
@@ -42,7 +37,7 @@ export class Game extends React.Component{
         <Row>
           <Col>
             <div className="replayIconCont" onClick={() => this.props.restart()}>
-              <img alt="replay icon" src={replay} srcSet={replay2x, replay3x} className="replayIcon"/>
+              <img alt="replay icon" src={replay} srcSet={replay2x} className="replayIcon"/>
             </div>
             <div className="playAgainCont" onClick={() => this.props.restart()}>
               <span>PLAY AGAIN</span>
@@ -103,7 +98,7 @@ export class Game extends React.Component{
                 <Col>
                   <div className="userDetails">
                     <div className="userIconCont">
-                      <img src={person} srcSet={person2x, person3x} alt="user icon" className="userIcon"/>
+                      <img src={person} srcSet={person2x} alt="user icon" className="userIcon"/>
                     </div>
                     <div className="userNameCont">
                       <span>{this.props.playerName}</span>
@@ -120,7 +115,7 @@ export class Game extends React.Component{
                 <Col>
                   <div className="diffDetails">
                     <div className="gamepadIconCont">
-                      <img src={gamepad} srcSet={gamepad2x, gamepad3x} alt="gamepad icon" className="gamepadIcon"/>
+                      <img src={gamepad} srcSet={gamepad2x} alt="gamepad icon" className="gamepadIcon"/>
                     </div>
                     <div className="levelCont">
                       <span>LEVEL : {this.props.level}</span>
@@ -155,7 +150,7 @@ export class Game extends React.Component{
               {this.props.status === 'running' &&
                 <div>
                   <div className="closeIconCont" onClick={() => this.props.endGame(this.props.score)}>
-                    <img alt="cross" src={cross} srcSet={cross2x, cross3x} className="closeIcon"/>
+                    <img alt="cross" src={cross} srcSet={cross2x} className="closeIcon"/>
                   </div>
                   <span className="stopGameText" onClick={() => this.props.endGame(this.props.score)}>STOP GAME</span>
                 </div>

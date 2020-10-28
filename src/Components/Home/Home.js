@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './Home.css';
 import { 
   Container,
@@ -64,7 +64,7 @@ function Home(props) {
             <div className="playIconCont">
               <img 
                 src={play}
-                srcSet={play2x, play3x}
+                srcSet={play2x}
                 alt="play icon"
                 className="playIcon"
               />
