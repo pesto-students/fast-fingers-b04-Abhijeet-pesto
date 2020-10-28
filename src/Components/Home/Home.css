@@ -1,0 +1,141 @@
+.homeCont{
+
+}
+
+.game-title {
+  width: 396px;
+  height: 81px;
+  font-family: LaserCorpsGradient;
+  font-size: 81px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--light-red);
+}
+
+.subHeadingCont{
+  width: 45%; /*modify for responsiveness*/
+  display: inline-flex !important;
+}
+
+.subHeading{
+  width: 100%;
+  height: 26px;
+  font-family: GothamMedium;
+  font-size: 26px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--light-red);
+  /* margin: 0 15px; */
+}
+
+.line{
+  width: 100%;
+  height: 0;
+  border: solid 2px var(--light-red);
+  display: inline-block;
+  /* margin-bottom: 5px; */
+}
+
+.inputContainer{
+  width: 620px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.nameInp{
+  opacity: 0.59;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
+}
+
+.nameInp::placeholder {
+  font-family: Breamcatcher;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #032228 !important;
+}
+
+.difficultyInp{
+  background: transparent !important;
+  font-family: Breamcatcher;
+  font-size: 22px;
+  color: #97a5a7 !important;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+}
+
+.playIconCont{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.playIcon {
+  width: 36.2px;
+  height: 41.4px;
+  object-fit: contain;
+  /* box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--light-red); */
+}
+
+.start-game {
+  /* width: 307px;
+  height: 48px; */
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: GothamMedium;
+  display: inline-block;
+  /* font-size: 48px; */
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--light-red);
+  cursor: pointer;
+}
+
+.error{
+  color: red;
+  float: left;
+}
+
+/* (1366x768) */
+@media  screen and (max-width: 1366px) {
+  .homeCont {
+    padding-top: 50px;
+  }
+
+  .startGameCont{
+    margin-top: 25px;
+  }
+
+  .start-game {
+    font-size: 18px;
+  }
+
+  .playIconCont{
+    position: relative;
+    bottom: 3px;
+  }
+
+  .difficultyLevelCont{
+    padding-top: 20px;
+  }
+}
+
+/* (1920x1080) */
+@media  screen and (max-width: 1920px) {
+  
+}
