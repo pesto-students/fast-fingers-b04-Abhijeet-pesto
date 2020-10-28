@@ -1,6 +1,7 @@
 /* Sets the containers height and width */
 .base-timer {
   position: relative;
+  display: inline-block;
   height: 200px;
   width: 200px;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Home.css';
 import { 
   Container,
@@ -11,7 +11,7 @@ import play from '../../assets/icons/Icon awesome-play.png'
 import play2x from '../../assets/icons/Icon awesome-play@2x.png'
 import play3x from '../../assets/icons/Icon awesome-play@3x.png'
 
-function Home() {
+function Home(props) {
   return (
     <Container fluid className="homeCont">
       <Row>
@@ -44,13 +44,14 @@ function Home() {
           <div className="inputContainer">
             <Form>
               <Form.Group controlId="userName">
-                <Form.Control type="text" placeholder="TYPE YOUR NAME" className="nameInp"/>
+                <Form.Control type="text" placeholder="TYPE YOUR NAME" className="nameInp" onChange={(e) => props.setName(e.target.value)}/>
+                  {props.errorMessage && <span className="error">{props.errorMessage}</span>}
               </Form.Group>
-              <Form.Group controlId="difficultyLevel">
-                <Form.Control as="select" className="difficultyInp">
-                  <option>Easy</option>
-                  <option>Medium</option>
-                  <option>Hard</option>
+              <Form.Group controlId="difficultyLevel" className="difficultyLevelCont">
+                <Form.Control as="select" className="difficultyInp" onChange={(e) => props.changeDifficulty(e.target.value)}>
+                  <option value="1">Easy</option>
+                  <option value="1.5">Medium</option>
+                  <option value="2">Hard</option>
                 </Form.Control>
               </Form.Group>
             </Form>
@@ -59,7 +60,7 @@ function Home() {
       </Row>
       <Row className="startGameCont">
         <Col>
-          <div>
+          <div onClick={() => props.startGame()}>
             <div className="playIconCont">
               <img 
                 src={play}

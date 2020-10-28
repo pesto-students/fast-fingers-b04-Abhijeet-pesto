@@ -3,31 +3,6 @@ import './Timer.css'
 
 export class CountdownTimer extends React.Component {
 
-  timePassed = 0;
-  timerInterval;
-  colorCodes = {
-    info: {
-      color: "green"
-    },
-    warning: {
-      color: "#FFCC00",
-      threshold: 0
-    },
-    alert: {
-      color: "red",
-      threshold: 0
-    }
-  };
-  remainingPathColor = this.colorCodes.info.color;
-  constructor(props) {
-    super(props);
-    this.state = {
-      timeRemainingInSeconds: this.props.startTimeInSeconds
-    };
-    this.colorCodes.warning.threshold = this.props.startTimeInSeconds * 0.5;
-    this.colorCodes.alert.threshold = this.props.startTimeInSeconds * 0.25;
-  }
-
   formatTime(time) {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
@@ -36,24 +11,6 @@ export class CountdownTimer extends React.Component {
     }
     return `${minutes}:${seconds}`;
   }
-
-  decrementTimeRemaining = () => {
-    if (this.state.timeRemainingInSeconds > 0) {
-      this.timePassed += 1;
-      this.setState({
-        timeRemainingInSeconds: this.state.timeRemainingInSeconds - 1
-      });
-      this.setRemainingPathColor(this.state.timeRemainingInSeconds);
-    } else {
-      clearInterval(this.timerInterval);
-    }
-  };
-
-  componentDidMount() {
-    this.timerInterval = setInterval(() => {
-      this.decrementTimeRemaining();
-    }, 1000);
-  };
 
   setRemainingPathColor(timeLeft) {
     const { alert, warning } = this.colorCodes;
@@ -73,8 +30,9 @@ export class CountdownTimer extends React.Component {
             <path
               id="base-timer-path-remaining"
               className="base-timer__path-remaining"
+              key={this.props.word}
               style={{
-                stroke: `${this.remainingPathColor}`,
+                stroke: `${this.props.pathColor}`,
                 animation: `countdown-animation ${this.props.startTimeInSeconds}s linear`
               }}
               d="
@@ -87,7 +45,7 @@ export class CountdownTimer extends React.Component {
           </g>
         </svg>
         <span id="base-timer-label" className="base-timer__label">
-          {this.formatTime(this.state.timeRemainingInSeconds)}
+          {this.formatTime(this.props.timeRemainingInSeconds)}
         </span>
       </div>
     );
