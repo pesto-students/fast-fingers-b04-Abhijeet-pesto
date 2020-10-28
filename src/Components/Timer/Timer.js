@@ -49,5 +49,5 @@ export class CountdownTimer extends React.Component {
         </span>
       </div>
     );
-  }
+  };
 }

@@ -5,7 +5,7 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
-import {CountdownTimer} from '../Timer/Timer';
+import { CountdownTimer } from '../Timer/Timer';
 
 import person from '../../assets/icons/Icon material-person.png';
 import person2x from '../../assets/icons/Icon material-person@2x.png';
@@ -15,6 +15,23 @@ import replay from '../../assets/icons/Icon open-reload.png';
 import replay2x from '../../assets/icons/Icon open-reload@2x.png';
 import cross from '../../assets/icons/Icon metro-cross.png';
 import cross2x from '../../assets/icons/Icon metro-cross@2x.png';
+
+function CharList(props) {
+  const listitems = props.word.split('').map((char, index) => {
+    return (
+      <span key={index}
+        style={{
+          color: (props.currentAnswer[index] ? 
+            props.currentAnswer[index].toLowerCase() === char.toLowerCase() ? '#54ba18' : '#445298' : '#ffffff')
+        }}>
+        {char}
+      </span>
+    );
+  });
+  return (
+    <div>{listitems}</div>
+  );
+}
 
 export class Game extends React.Component{
 
@@ -48,20 +65,7 @@ export class Game extends React.Component{
     );
   }
 
-  CharList = (props) => {
-    const listitems = props.word.split('').map((char, index) => 
-      <span key={index}
-        style={{
-          color: (this.props.currentAnswer[index] ? 
-            this.props.currentAnswer[index].toLowerCase() === char.toLowerCase() ? '#54ba18' : '#445298' : '#ffffff')
-        }}>
-        {char}
-      </span>
-    );
-    return (
-      <div>{listitems}</div>
-    );
-  }
+  
 
   InGame = () => {
     return (
@@ -76,7 +80,10 @@ export class Game extends React.Component{
           />
         </div>
         <div className="wordCont">
-          <this.CharList word={this.props.word}/>
+          <CharList 
+            word = {this.props.word}
+            currentAnswer = {this.props.currentAnswer}
+          />
         </div>
         <div className="userInpCont">
           <input type="text" className="userInp" 
