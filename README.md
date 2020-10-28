@@ -6,6 +6,8 @@ meet the requirements mentioned in the MVP below.
 ## About
 https://friendly-payne-ae7447.netlify.app
 
+Only optimized for res - 1366 x 768
+
 ## MVP Requirement
 
 1. Ask player to enter his/her name before starting the game.
