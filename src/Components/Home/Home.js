@@ -9,7 +9,6 @@ import {
 import { ReactComponent as KeyboardImg } from '../../assets/svg/Icon awesome-keyboard.svg';
 import play from '../../assets/icons/Icon awesome-play.png'
 import play2x from '../../assets/icons/Icon awesome-play@2x.png'
-import play3x from '../../assets/icons/Icon awesome-play@3x.png'
 
 function Home(props) {
   return (
