@@ -4,7 +4,7 @@ Pesto Tech is proudly launching its own speed typing game named **Fast fingers**
 meet the requirements mentioned in the MVP below.
 
 ## About
-https://friendly-payne-ae7447.netlify.app
+https://fast-fingers-aa.netlify.app/
 
 Only optimized for res - 1366 x 768
 
