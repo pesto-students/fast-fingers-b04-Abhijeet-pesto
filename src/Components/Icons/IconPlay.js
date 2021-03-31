@@ -4,18 +4,20 @@ export const IconPlay = ({ classname }) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			className={classname}
-			width='84.231'
-			height='89.41'
-			viewBox='0 0 84.231 89.41'>
+			className='icon-play-svg'
+			// width='84.231'
+			// height='89.41'
+			viewBox='0 0 84.231 89.41'
+		>
 			<defs>
 				<filter
 					id='dtfdryzuwa'
-					width='84.231'
-					height='89.41'
+					// width='84.231'
+					// height='89.41'
 					x='0'
 					y='0'
-					filterUnits='userSpaceOnUse'>
+					filterUnits='userSpaceOnUse'
+				>
 					<feOffset />
 					<feGaussianBlur result='blur' stdDeviation='8' />
 					<feFlood floodOpacity='.161' />

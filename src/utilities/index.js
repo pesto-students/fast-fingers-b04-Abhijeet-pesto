@@ -1,0 +1,1 @@
+export { playerDetailsInstance } from './playerDetailModel';

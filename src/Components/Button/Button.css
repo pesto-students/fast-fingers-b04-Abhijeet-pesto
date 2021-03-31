@@ -1,0 +1,22 @@
+.action-btn {
+	background: none;
+	border: none;
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+.button-text-container {
+	text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+	font-family: GothamMedium;
+	display: inline-block;
+	font-size: 4rem;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.21;
+	letter-spacing: normal;
+	text-align: left;
+	color: var(--light-red);
+	cursor: pointer;
+}
