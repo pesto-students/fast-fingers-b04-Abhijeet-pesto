@@ -1,0 +1,211 @@
+.userDetails, .diffDetails{
+  float: left;
+}
+
+.userIcon, .gamepadIcon{
+  object-fit: contain;
+}
+
+.userIconCont, .gamepadIconCont{
+  display: inline-block;
+  position: relative;
+}
+
+.userNameCont, .levelCont{
+  display: inline-block;
+  font-family: Breamcatcher;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.gameTitleCont{
+  float: right;
+  font-family: LaserCorpsGradient;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.scoreDetails{
+  float: right;
+  font-family: Breamcatcher;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.gameDetails{
+  font-family: Gotham;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.endScoreDetails{
+  font-family: Gotham;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.replayIcon{
+  object-fit: contain;
+}
+
+.replayIconCont {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.playAgainCont{
+  cursor: pointer;
+  display: inline-block;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.wordCont{
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.userInp{
+  background: rgb(155, 155, 155);
+  text-align: center;
+  font-family: Breamcatcher;
+}
+
+.quitGameCont{
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  cursor: pointer;
+  position: fixed;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+}
+
+.closeIconCont{
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* (1366x768) */
+@media  screen and (max-width: 1366px) {
+  .gameCont{
+    padding-top: 20px;
+  }
+
+  .userIcon, .gamepadIcon {
+    width: 35px;
+    height: 30px;
+  }
+
+  .userIconCont, .gamepadIconCont{
+    bottom: 7px;
+  }
+
+  .userNameCont, .levelCont{
+    font-size: 34px;
+    padding-left: 15px;
+  }
+
+  .gameTitleCont, .scoreDetails{
+    font-size: 34px;
+    padding-right: 50px;
+  }
+
+  .gameDetails {
+    font-size: 55px;
+  }
+
+  .endScoreDetails {
+    font-size: 90px;
+  }
+
+  .replayIcon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .replayIconCont{
+    bottom: 8px;
+  }
+
+  .playAgainCont{
+    font-size: 35px;
+    padding-left: 15px;
+  }
+
+  .endGameCont{
+    padding-top: 100px;
+  }
+
+  .wordCont{
+    padding: 15px 0;
+    font-size: 80px;
+  }
+
+  .userInp{
+    width: 300px;
+    height: 45px;
+    font-size: 30px;
+  }
+
+  .inGameCont{
+    padding-top: 50px;
+  }
+
+  .quitGameCont{
+    bottom: 25px;
+    font-size: 36px;
+    padding-left: 15px;
+  }
+
+  .closeIcon{
+    width: 45px;
+    height: 45px;
+  }
+
+  .stopGameText{
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
